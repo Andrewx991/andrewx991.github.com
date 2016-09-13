@@ -25,21 +25,20 @@ html {
   100%  {border-color:#1abc9c;}
 }
 
-p {
+p, h1 {
   font-family: 'Noto Sans', sans-serif !important;
 }
-
-
 
 .quote-source {
   font-size: 70%;
 }
 
 .blockquote-hags {
-  padding-top: 3em;
+  padding-top: 4em;
 }
+
 @media (max-width: 992px) {
-  .blockquote-hags {
+  .center-text-sm {
     text-align: center;
   }
 }
