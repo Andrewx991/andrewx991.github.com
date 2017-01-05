@@ -64,13 +64,33 @@
       </div>
       <div class="row">
         <div class="col-md-12">
+          <h2>Performance Tuning</h2>
+          1.5.2017
+          <p>
+            I read a cool article about 
+              <a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7">building a fast site</a>
+            and wanted to try some techniques out.
+            So I took a few minutes to performance test and optimized a few things.
+            See <a href="">the commit</a> for details.
+
+            The out come was reducing my time to first paint by a few hundred milliseconds.
+            <br/><br/>
+            For you:<br/>
+            The time to load all DOM content was <span id="timeToDomLoaded">(Loading...)</span> ms.<br/>
+            The time to first paint was <span id="timeToFirstPaint">(Loading...)</span> ms.<br/>
+            The time to fire the load event was <span id="timeToLoad">(Loading...)</span> ms.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
           <h2>Hello Andrewx991.github.io</h2>
           9.12.2016
           <p>
             I decided to try out github pages today. Its simple and I didn't waste a night deciding what web framework to use.
           </p>
         </div>
-      </div>
+      </div>      
     </div>
 
     <hr/>
@@ -156,6 +176,36 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var attachToOnLoad = function(func) {
+        if (window.attachEvent)
+            window.attachEvent('onload', func);
+        else
+            window.addEventListener('load', func, false);
+      }
+
+      var buildLoadJsFunc = function(src, onLoad) {
+        return function() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = src;
+          s.onload = onLoad;
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+
+      var populatePerformanceElements = function() {
+        if (!window.timing) return;
+        document.getElementById("timeToDomLoaded").innerHTML = window.timing.getTimes().initDomTreeTime;
+        document.getElementById("timeToFirstPaint").innerHTML = window.timing.getTimes().firstPaintTime;
+        document.getElementById("timeToLoad").innerHTML = window.timing.getTimes().loadTime;
+      }
+
+      attachToOnLoad(buildLoadJsFunc("js-modules/timing.js", populatePerformanceElements));
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
