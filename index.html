@@ -59,7 +59,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Blog Posts</h1>
+          <h1 class="text-center">Blog Posts</h1>
         </div>
       </div>
       <div class="row">
@@ -71,14 +71,20 @@
               <a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7">building a fast site</a>
             and wanted to try some techniques out.
             So I took a few minutes to performance test and optimized a few things.
-            See <a href="">the commit</a> for details.
+            See
+                <a href="https://github.com/Andrewx991/andrewx991.github.com/commit/bc9e75e594d481629066dbd8c1ba9d2524dbd03d">the commit</a>
+            for details.
 
             The out come was reducing my time to first paint by a few hundred milliseconds.
-            <br/><br/>
-            For you:<br/>
-            The time to load all DOM content was <span id="timeToDomLoaded">(Loading...)</span> ms.<br/>
-            The time to first paint was <span id="timeToFirstPaint">(Loading...)</span> ms.<br/>
-            The time to fire the load event was <span id="timeToLoad">(Loading...)</span> ms.
+            <br/>
+            <br/>
+            For you:
+            <br/>
+            The time to load all DOM content was <span id="timeToDomLoaded">(Loading...)</span>.
+            <br/>
+            The time to first paint was <span id="timeToFirstPaint">(Loading...)</span>.
+            <br/>
+            The time to fire the load event was <span id="timeToLoad">(Loading...)</span>.
           </p>
         </div>
       </div>
@@ -197,12 +203,20 @@
         }
       }
 
+      var appendUnitOrDefaultText = function(value, unit, defaultText) {
+        if(value)
+          return value + " " + unit;
+        return defaultText;
+      }
+
       var populatePerformanceElements = function() {
         if (!window.timing) return;
-        document.getElementById("timeToDomLoaded").innerHTML = window.timing.getTimes().initDomTreeTime;
-        document.getElementById("timeToFirstPaint").innerHTML = window.timing.getTimes().firstPaintTime;
-        document.getElementById("timeToLoad").innerHTML = window.timing.getTimes().loadTime;
+        document.getElementById("timeToDomLoaded").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().initDomTreeTime, "ms", "not determinable from your browser.");
+        document.getElementById("timeToFirstPaint").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().firstPaintTime, "ms", "not determinable from your browser.");
+        document.getElementById("timeToLoad").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().loadTime, "ms", "not determinable from your browser.");
       }
+
+
 
       attachToOnLoad(buildLoadJsFunc("js-modules/timing.js", populatePerformanceElements));
     </script>
