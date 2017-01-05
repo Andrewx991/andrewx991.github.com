@@ -211,9 +211,9 @@
 
       var populatePerformanceElements = function() {
         if (!window.timing) return;
-        document.getElementById("timeToDomLoaded").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().initDomTreeTime, "ms", "not determinable from your browser.");
-        document.getElementById("timeToFirstPaint").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().firstPaintTime, "ms", "not determinable from your browser.");
-        document.getElementById("timeToLoad").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().loadTime, "ms", "not determinable from your browser.");
+        document.getElementById("timeToDomLoaded").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().initDomTreeTime, "ms", "not determinable from your browser");
+        document.getElementById("timeToFirstPaint").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().firstPaintTime, "ms", "not determinable from your browser");
+        document.getElementById("timeToLoad").innerHTML = appendUnitOrDefaultText(window.timing.getTimes().loadTime, "ms", "not determinable from your browser");
       }
 
 
