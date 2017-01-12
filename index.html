@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    
+
     <style type="text/css">
     html {
       border-top: 4px solid;
@@ -34,8 +34,20 @@
       100%  {border-color:#1abc9c;}
     }
 
-    p, h1 {
+    body {
       font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+    }
+
+    .horizontalRulez {
+      animation:borderanimatron 10s;
+      -moz-animation:borderanimatron 10s infinite;
+      -webkit-animation:borderanimatron 10s infinite;
+    }
+
+    .blogPod {
+      margin-top: 2em;
+      border-left: 5px solid #eee;
+      padding-left: 20px;;
     }
     </style>
 
@@ -59,147 +71,154 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-center">Blog Posts</h1>
+          <h1 class="text-center">Thoughts</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h2>2016 Books in Review</h2>
-          1.11.2017
-          <p>
-            2016 was the first year in too long a time that I was really able to get back into reading for enjoyment.
-            There are serveral books I particularly enjoyed and would like to call out here. You can read my reviews below.
-            <ul>
-              <li>Busy: How to Thrive in a World of Too Much - Tony Crabbe
-              <li>The Effective Executive - Peter Drucker
-              <li>Site Reliability Engineering - Google SRE Team
-              <li>Clean Code - Robert Martin
-              <li>The Good Soldiers - David Finkel
-            </ul>
-          </p>
-          <hr/>
-          <div class="row">
-            <div class="col-md-3 col-sm-12">
-              <img src="images\books\busy.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
-            </div>
-            <div class="col-md-9 col-sm-12">
-              <br/>
-              <p>
-                I wanted to start with this one because for me 2016 was a busy year.
-                I got married, left school, took up new hobbies and took on additional responsibilites at work.
-                This book gives practical advice that helped me realize I was becoming more busy than productive and course correct.
-                I would recommend to anyone who feels like they are spinning their wheels... Its like traction control, but for life?
-              </p>
-            </div>
-          </div>
-          <hr/>
-          <div class="row">
-            <div class="col-md-3 col-sm-12">
-              <img src="images\books\tee.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
-            </div>
-            <div class="col-md-9 col-sm-12">
-              <br/>
-              <p>
-                Short, well written, and contains extremely valuable lessons, you can't ask much more from a book. 
-                The Effective Executive, despite its title, is useful for any individual that wants to be an effective decision maker.
-                Drucker uses historical examples and elegantly simple sentences to explain that effectiveness can be learned and it is important to learn it.
-                I would recommend to pretty much anyone unless they are content with just taking orders.
-              </p>
-            </div>            
-          </div>
-          <hr/>
-          <div class="row">
-            <div class="col-md-3 col-sm-12">
-              <img src="images\books\sre.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
-            </div>
-            <div class="col-md-9 col-sm-12">
-              <br/>
-              <p>
-                  There's a point when having people manually deploy and operate software doesn't scale, this book lays down the path beyond that using Google as an example.
-                  It focuses on one key thing that I often see software companies neglect: reliability.
-                  It doesn't matter how fast you can churn out new stuff if the old stuff keeps breaking.
-                  I'll be honest, I only read the first 18 chapters and cherry picked from the rest, but it was well worth it.
-                  I would recommend to every developer as I am a firm believer (thanks in part to this book) that its not good system design if you don't account for the long term operation.
-              </p>
-            </div>            
-          </div>
-          <hr/>
-          <div class="row">
-            <div class="col-md-3 col-sm-12">
-              <img src="images\books\cc.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
-            </div>
-            <div class="col-md-9 col-sm-12">
-              <br/>
-              <p>
-                  A common recommendation amongst developers and I can see why.
-                  If you follow the habits in this book I can't guarentee you will write good code, but if you write good code, you probably follow the habits described in this book.
-                  Seriously, if you simply read this and try to follow its rules you aren't going to write good code, or more importantly, good software.
-                  Only by understanding why good systems often satisfy these rules will you learn to write it yourself.
-                  I found the first 12 chapters to be the most valuable, and similar to the SRE book, cherry picked the rest.                  
-              </p>
-            </div>            
-          </div>
-          <hr/>
-          <div class="row">
-            <div class="col-md-3 col-sm-12">
-              <img src="images\books\tgs.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
-            </div>
-            <div class="col-md-9 col-sm-12">
-              <br/>
-              <p>
-                  I'll finish with a non-career oriented book, The Good Soldiers.
-                  It was recommended to me by a very wise former colleague.
-                  If you really want to know what modern war is like, give this a read.
-                  Brutually realistic and honest. I would recommend to any U.S. citizen that cares about our military operations.
-                  I am looking forward to reading its follow up, Thank You For Your Service, in 2017.
-              </p>
-            </div>            
-          </div>                      
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Performance Tuning</h2>
-          1.5.2017
-          <p>
-            I read a cool article about 
-              <a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7">building a fast site</a>
-            and wanted to try some techniques out.
-            So I took a few minutes to performance test and optimized a few things.
-            See
-                <a href="https://github.com/Andrewx991/andrewx991.github.com/commit/bc9e75e594d481629066dbd8c1ba9d2524dbd03d">the commit</a>
-            for details.
+          <div class="blogPod">
+            <h2>2016 Books in Review</h2>
+            1.11.2017
 
-            The out come was reducing my time to first paint by a few hundred milliseconds.
-            <br/>
-            <br/>
-            For you:
-            <br/>
-            The time to load all DOM content was <span id="timeToDomLoaded">(Loading...)</span>.
-            <br/>
-            The time to first paint was <span id="timeToFirstPaint">(Loading...)</span>.
-            <br/>
-            The time to fire the load event was <span id="timeToLoad">(Loading...)</span>.
-          </p>
+            <p>
+              2016 was the first year in too long a time that I was really able to get back into reading for enjoyment.
+              There are serveral books I particularly enjoyed and would like to call out here. You can read my reviews below.
+              <ul>
+                <li>Busy: How to Thrive in a World of Too Much - Tony Crabbe
+                <li>The Effective Executive - Peter Drucker
+                <li>Site Reliability Engineering - Google SRE Team
+                <li>Clean Code - Robert Martin
+                <li>The Good Soldiers - David Finkel
+              </ul>
+            </p>
+            <hr/>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img src="images\books\busy.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <br/>
+                <p>
+                  I wanted to start with this one because for me 2016 was a busy year.
+                  I got married, left school, took up new hobbies and took on additional responsibilites at work.
+                  This book gives practical advice that helped me realize I was becoming more busy than productive and course correct.
+                  I would recommend to anyone who feels like they are spinning their wheels... Its like traction control, but for life?
+                </p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img src="images\books\tee.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <br/>
+                <p>
+                  Short, well written, and contains extremely valuable lessons, you can't ask much more from a book.
+                  The Effective Executive, despite its title, is useful for any individual that wants to be an effective decision maker.
+                  Drucker uses historical examples and elegantly simple sentences to explain that effectiveness can be learned and it is important to learn it.
+                  I would recommend to pretty much anyone unless they are content with just taking orders.
+                </p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img src="images\books\sre.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <br/>
+                <p>
+                    There's a point when having people manually deploy and operate software doesn't scale, this book lays down the path beyond that using Google as an example.
+                    It focuses on one key thing that I often see software companies neglect: reliability.
+                    It doesn't matter how fast you can churn out new stuff if the old stuff keeps breaking.
+                    I'll be honest, I only read the first 18 chapters and cherry picked from the rest, but it was well worth it.
+                    I would recommend to every developer as I am a firm believer (thanks in part to this book) that its not good system design if you don't account for the long term operation.
+                </p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img src="images\books\cc.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <br/>
+                <p>
+                    A common recommendation amongst developers and I can see why.
+                    If you follow the habits in this book I can't guarentee you will write good code, but if you write good code, you probably follow the habits described in this book.
+                    Seriously, if you simply read this and try to follow its rules you aren't going to write good code, or more importantly, good software.
+                    Only by understanding why good systems often satisfy these rules will you learn to write it yourself.
+                    I found the first 12 chapters to be the most valuable, and similar to the SRE book, cherry picked the rest.
+                </p>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <img src="images\books\tgs.png" width="130" height="170" alt="Busy: How to thrive in a world of too much" class="img-thumbnail center-block"/>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <br/>
+                <p>
+                    I'll finish with a non-career oriented book, The Good Soldiers.
+                    It was recommended to me by a very wise former colleague.
+                    If you really want to know what modern war is like, give this a read.
+                    Brutually realistic and honest. I would recommend to any U.S. citizen that cares about our military operations.
+                    I am looking forward to reading its follow up, Thank You For Your Service, in 2017.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h2>Hello Andrewx991.github.io</h2>
-          9.12.2016
-          <p>
-            I decided to try out github pages today. Its simple and I didn't waste a night deciding what web framework to use.
-          </p>
+          <div class="blogPod">
+            <h2>Performance Tuning</h2>
+            1.5.2017
+            <p>
+              I read a cool article about
+                <a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7">building a fast site</a>
+              and wanted to try some techniques out.
+              So I took a few minutes to performance test and optimized a few things.
+              See
+                  <a href="https://github.com/Andrewx991/andrewx991.github.com/commit/bc9e75e594d481629066dbd8c1ba9d2524dbd03d">the commit</a>
+              for details.
+
+              The out come was reducing my time to first paint by a few hundred milliseconds.
+              <br/>
+              <br/>
+              For you:
+              <br/>
+              The time to load all DOM content was <span id="timeToDomLoaded">(Loading...)</span>.
+              <br/>
+              The time to first paint was <span id="timeToFirstPaint">(Loading...)</span>.
+              <br/>
+              The time to fire the load event was <span id="timeToLoad">(Loading...)</span>.
+            </p>
+          </div>
         </div>
-      </div>      
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="blogPod">
+            <h2>Hello Andrewx991.github.io</h2>
+            9.12.2016
+            <p>
+              I decided to try out github pages today. Its simple and I didn't waste a night deciding what web framework to use.
+            </p>
+            </div>
+        </div>
+      </div>
     </div>
 
-    <hr/>
+    <hr class="horizontalRulez"/>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Reviews</h1>
+          <h1 class="text-center">Reviews</h1>
         </div>
       </div>
       <div class="row">
@@ -261,7 +280,7 @@
       </div>
     </div>
 
-    <hr/>
+    <hr class="horizontalRulez"/>
 
     <div class="container">
       <div class="row">
