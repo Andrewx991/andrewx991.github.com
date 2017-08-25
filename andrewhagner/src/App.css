@@ -4,18 +4,40 @@ body,
     font-family: 'Nunito', sans-serif;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.img-center {
-  display: block;
-  margin: auto;
-}
-
 .title {
   padding: 2em 1em 1em 1em;
   background-color: rgb(250, 250, 250);
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.title img {
+  display: block;
+  margin: auto;
+}
+
+.title h1 {
+  margin-bottom: 0.25em;
+}
+
+@media screen and (min-width: 48em) {
+  .title {
+    text-align: left;
+  }
+
+  .title img {
+    margin-right: 1em;
+    margin-left: auto;
+  }
+
+  .title h1 {
+    margin: 0;
+  }
+
+  .title-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(25%);
+  }
 }

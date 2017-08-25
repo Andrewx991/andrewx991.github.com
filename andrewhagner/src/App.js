@@ -7,11 +7,11 @@ class App extends Component {
     return (
       <div>
         <div className="pure-g title">
-          <div className="pure-u-1 pure-u-md-1-2">
-              <img src={logo} alt="Andrew Hagner" className="pure-img img-center"/>
+          <div className="pure-u-1 pure-u-md-10-24">
+              <img src={logo} alt="Andrew Hagner" className="pure-img" />
           </div>
-          <div className="pure-u-1 pure-u-md-1-2 text-center">
-            <h1 style={{marginBottom: '0.25em'}}>Andrew Hagner</h1>
+          <div className="pure-u-1 pure-u-md-14-24 title-text">
+            <h1>Andrew Hagner</h1>
             <span>Technology, Architecture, and Logistics Consulting</span>
           </div>
         </div>
