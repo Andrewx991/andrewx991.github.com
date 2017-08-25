@@ -1,12 +1,21 @@
-.Nav {
-  background-color: rgb(61, 79, 93);
-  color: #FFFFFF;
-  position: fixed;
-  bottom: 0;
-  top: 0;
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family: 'Nunito', sans-serif;
 }
 
-.Content {
-  background-color: #ffffff;
-  margin-left: 25%;
+.text-center {
+  text-align: center;
+}
+
+.img-center {
+  display: block;
+  margin: auto;
+}
+
+.title {
+  padding: 2em 1em 1em 1em;
+  background-color: rgb(250, 250, 250);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
